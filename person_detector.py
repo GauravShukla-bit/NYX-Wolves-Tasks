@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-"""object_detector.ipynb
 
-
-!pip install -q mediapipe==0.10.0
 
 
 
@@ -22,14 +18,8 @@ TEXT_COLOR = (255, 0, 0)  # red
 def visualize(
     image,
     detection_result
-) -> np.ndarray:
-  """Draws bounding boxes on the input image and return it.
-  Args:
-    image: The input RGB image.
-    detection_result: The list of all "Detection" entities to be visualize.
-  Returns:
-    Image with bounding boxes.
-  """
+)  np.ndarray:
+
   for detection in detection_result.detections:
     # Draw bounding_box
     bbox = detection.bounding_box
